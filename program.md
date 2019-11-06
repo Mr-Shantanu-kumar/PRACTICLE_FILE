@@ -1,8 +1,8 @@
 ----
 # **PROGRAMMING FOR PROBLEM SOLVING ESC-18105**
 ----
-![](https://nptel.ac.in/content/college_assets/college_logo/1078_logo.jpg)
-----
+![](http://www.gnenv.com/wp-content/uploads/2016/07/GNE-LOGO-2.png)
+---
 ## **NAME** - *SHANTANU KUMAR*
 ## **ROLL NO.** - *1915092*
 ## **BRANCH** - *COMPUTER SCIENCE*
