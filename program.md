@@ -87,7 +87,7 @@ void main()
 ```
 
 ----
-## 4. EVEN ODD CHECK
+## 4. TO CHECK EVEN OR ODD NUMBER
 ```C
 #include<stdio.h>
 void main()
@@ -202,56 +202,37 @@ int main()
 ## 9. BINARY SEARCH
 ```C
 #include<stdio.h>
-        
-int check(int b[],int m,int o)
-{       
-        int p=-1,mid;
- int f=1,l=m;
- mid=(f+l)/2;           
-
-while(f<=l)
- {
-        mid=(f+l)/2;
-        if(b[mid]==o)
-        {
-                p=mid;
-                break;
-        }
-        else if(o>b[mid])
-        {
-                f=mid+1;
-        }
-        else if (o<b[mid])
-        {
-                l=mid-1;
-        }
-        
-}       
-                        return p;
-        
-}     
-       
-void main()
-{       
-        int n,num,index;
-        printf("enter the array size\n");
-        scanf("%d",&n);
-        int a[n];
-        printf("enter the array elements in assending order\n");
-        for(int i=1;i<=n;i++)
-        {
-                scanf("%d",&a[i]);
-        }
-        printf("now enter the number which you want to check\n whether it is present or not in entered array\n");
-        
-        scanf("%d",&num);
-        index=check(a,n,num);
-        if(index==-1)   
-        printf("element is not found\n");
-        else
-        printf("element is found at the position %d \n",index);
-
+int main()
+{
+int search,array[20],i,n,first,middle,last;
+printf("Enter size of array:\n");
+scanf("%d",&n);
+printf("Enter the elements of array:\n");
+for(i=0;i<n;i++)
+{
+ scanf("%d",&array[i]);
 }
+printf("Enter the element to search\n");
+scanf("%d",&search);
+first=0;
+last=n-1;
+middle=(first+last)/2;
+while(first<=last)
+{
+if(array[middle]<search)
+first=middle+1;
+else if(array[middle]==search)
+{printf("%d is found at location %d.\n",search,middle+1);
+break;
+}
+else
+last=middle-1;
+middle=(first+last)/2;
+}
+if(first>last)
+printf("%d isnot found in the list\n",search);      
+return 0;                                           
+}                                               
 ```
 ----
 ## 10. FACTORIAL OF A NUMBER
@@ -345,7 +326,7 @@ printf("\n%d is the greatest number\n",c);
 }
 ```
 ----
-## 15. GREATEST INTEAGER FUNCTION
+## 15. TO FIND GREATEST COMMON DIVISOR
 ```C
 #include<stdio.h>
 int gcd(int a,int b)
@@ -367,7 +348,7 @@ int main()
 }
 ```
  ----
- ## 16. LEAP YEAR CHECK
+ ## 16. CHECKING FOR LEAP YEAR
  ```C
  #include<stdio.h>
 int main()
@@ -385,38 +366,30 @@ int main()
 ## 17. LINEAR SEARCH
 ```C
 #include<stdio.h>
-
-int check(int b[],int m,int o)
-{int p=-1;
-        for(int i=1;i<=m;i++)
-        {
-                if(b[i]==o)
-                 p = i;
-        }
-
-                        return p;
-        
-}
-
-void main()
+int main()
 {
-        int n,num,index;
-        printf("enter the array size\n");
-        scanf("%d",&n);
-        int a[n];
-        printf("enter the array elements\n");
-        for(int i=1;i<=n;i++)
-        {
-                scanf("%d",&a[i]);
-        }
-        printf("now enter the number which you want to check\n whether it is present or not in entered array\n");
+int array[20],search,i,n;
+printf("Enter the size of array:\n");
+scanf("%d",&n);
+printf("size of array is %d\n",n);
+printf("Enter the elements of array\n");
+  for(i=0;i<n;i++)
+ {
+  scanf("%d",&array[i]);
+ }
+printf("Enter the number to search: \n");
+scanf("%d",&search);
 
-        scanf("%d",&num);
-        index=check(a,n,num);
-        if(index==-1)
-        printf("element is not found\n");
-        else
-        printf("element is found at the position %d \n",index);
+for(i=0;i<n;i++)
+{
+ if(array[i]==search)
+  printf("%d is present at location %d\n",search,i+1);
+}
+{
+ if(array[i]!=search)
+ printf("%d is not present in array\n",search);
+}
+return 0;
 }
 ```
 ----
@@ -547,7 +520,7 @@ int main()
 }
 ```
 ----
-## 21. CHECK PALINDROME NUMBER
+## 21. CHECKING FOR PALINDROME NUMBER
 ```C
 #include<stdio.h>
 int main()
